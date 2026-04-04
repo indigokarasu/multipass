@@ -211,3 +211,17 @@ Public.
 | `references/surfaces.md` | Discovery endpoints and query strategies |
 | `references/scoring.md` | Candidate scoring, known resources, red/green flags |
 | `references/resilience.md` | Identity cascade, gates, retry logic, reframing, degradation, replay health |
+
+## Update command
+
+This skill self-updates every 24 hours via:
+
+```bash
+openclaw multipass.update
+```
+
+This pulls the latest version from GitHub and restarts the skill's background tasks if applicable.
+
+## Support file map
+
+This skill includes no external support files.
