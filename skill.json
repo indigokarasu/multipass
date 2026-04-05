@@ -1,6 +1,6 @@
 {
   "name": "ocas-multipass",
-  "version": "4.0.1",
+  "version": "4.0.2",
   "description": "Accomplish tasks that need tools the agent doesn't have. Plans approaches, fills capability gaps with sandboxed tools, executes within an isolated session. Disposable identity, parallel discovery, incremental checkpoints, graceful degradation. Output: task result + replay script. No global installs, no real identity, clean state in and out. Trigger: 'multipass.run {task}', agent about to say 'I can't do that' due to missing tool, 'figure out how to do X'. Do not use for tasks solvable with installed skills, permanent skill installs (use openclaw skills install), skill builds (use Forge), or general web research (use Sift).",
   "author": "Indigo Karasu",
   "email": "mx.indigo.karasu@gmail.com",

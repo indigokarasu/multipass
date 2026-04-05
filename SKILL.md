@@ -195,7 +195,7 @@ On first run (`multipass.init`):
 4. Verify session dir is writable
 5. Log initialization as DecisionRecord
 
-## Ontology mapping
+## Ontology types
 
 Multipass does not extract entities. It does not emit Signals to Elephas.
 
