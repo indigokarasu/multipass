@@ -1,3 +1,9 @@
+## [4.0.3] - 2026-04-06
+
+### Added
+- OKRs section in SKILL.md with formal OKR definitions for skill evaluation
+- YAML-formatted skill_okrs with metrics (tool_invocation_success_rate, spawn_depth_efficiency, isolation_violation_rate) and evaluation windows
+
 ## [2026-04-04] Spec Compliance Update
 
 ### Changes
