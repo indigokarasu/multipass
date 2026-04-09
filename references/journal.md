@@ -2,7 +2,7 @@
 
 Multipass produces journals per spec-ocas-journal.md v1.3. Write a journal at the end of every run. Runs missing journals are invalid.
 
-Journal path: `~/openclaw/journals/ocas-multipass/YYYY-MM-DD/{run_id}.json`
+Journal path: `$OCAS_DATA_ROOT/journals/ocas-multipass/YYYY-MM-DD/{run_id}.json`
 
 Written atomically (write to `.tmp`, then rename). Never edit after writing.
 
@@ -47,7 +47,7 @@ Written atomically (write to `.tmp`, then rename). Never edit after writing.
   },
   "action": {
     "session_id": "mp_xxxxxxx",
-    "session_dir": "~/openclaw/data/ocas-multipass/sessions/mp_xxxxxxx/",
+    "session_dir": "$OCAS_DATA_ROOT/data/ocas-multipass/sessions/mp_xxxxxxx/",
     "tools_resolved": ["skill:author/tool-name", "api:open-meteo"],
     "identity_used": false,
     "side_effect_executed": true
@@ -115,7 +115,7 @@ Written atomically (write to `.tmp`, then rename). Never edit after writing.
     "reason": "observation_run"
   },
   "artifacts": [
-    {"type": "search_results", "path": "~/openclaw/data/ocas-multipass/search_log.jsonl"}
+    {"type": "search_results", "path": "$OCAS_DATA_ROOT/data/ocas-multipass/search_log.jsonl"}
   ],
   "metrics": {
     "surfaces_searched": 3,

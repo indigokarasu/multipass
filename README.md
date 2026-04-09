@@ -2,6 +2,9 @@
 
 Multipass accomplishes tasks that require tools you don't currently have. Invoke `multipass.run {task}`, Multipass runs to completion autonomously, you get the output. No check-ins, no approval gates, no escalation.
 
+
+Skill packages follow the [agentskills.io](https://agentskills.io/specification) open standard and are compatible with OpenClaw, Hermes Agent, and any agentskills.io-compliant client.
+
 Everything happens inside a session directory. Multipass plans multiple approaches, discovers and provisions the best available tool for each capability gap, executes with incremental checkpoints and graceful degradation, and writes a task result plus a standalone replay script. If no approach succeeds, it produces a failure report documenting every path tried -- a useful artifact even when the task can't be completed.
 
 ---
@@ -35,7 +38,7 @@ Everything happens inside a session directory. Multipass plans multiple approach
 ## Storage
 
 ```
-~/openclaw/data/ocas-multipass/
+$OCAS_DATA_ROOT/data/ocas-multipass/
   config.json
   search_log.jsonl
   decisions.jsonl
@@ -48,7 +51,7 @@ Everything happens inside a session directory. Multipass plans multiple approach
       checkpoints/
       workspace/
       output/
-~/openclaw/journals/ocas-multipass/
+$OCAS_DATA_ROOT/journals/ocas-multipass/
   YYYY-MM-DD/{run_id}.json
 ```
 

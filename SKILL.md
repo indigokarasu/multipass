@@ -1,6 +1,36 @@
 ---
 name: ocas-multipass
-description: Accomplish tasks that need tools the agent doesn't have. Multipass plans approaches, fills capability gaps with sandboxed tools, and executes autonomously within an isolated session. No check-ins, no approval gates, no escalation. Output is the task result and a replay script. No global installs, no real identity, clean state in and out.
+description: >
+  Accomplish tasks that need tools the agent doesn't have. Plans approaches,
+  fills capability gaps with sandboxed tools, executes within an isolated
+  session. Disposable identity, parallel discovery, incremental checkpoints,
+  graceful degradation. Output: task result + replay script. No global
+  installs, no real identity, clean state in and out. Trigger: 'multipass.run
+  {task}', agent about to say 'I can't do that' due to missing tool, 'figure
+  out how to do X'. Do not use for tasks solvable with installed skills,
+  permanent skill installs (use openclaw skills install), skill builds (use
+  Forge), or general web research (use Sift).
+metadata:
+  author: Indigo Karasu
+  email: mx.indigo.karasu@gmail.com
+  version: "4.1.0"
+  hermes:
+    tags: [tools, isolation, capability-gap]
+    category: execution
+  openclaw:
+    skill_type: workflow
+    visibility: private
+    filesystem:
+      read:
+        - "$OCAS_DATA_ROOT/data/ocas-multipass/"
+      write:
+        - "$OCAS_DATA_ROOT/data/ocas-multipass/"
+        - "$OCAS_DATA_ROOT/journals/ocas-multipass/"
+    self_update:
+      source: "https://github.com/indigokarasu/multipass"
+      mechanism: "version-checked tarball from GitHub via gh CLI"
+      command: "multipass.update"
+      requires_binaries: [gh, tar, python3]
 ---
 
 # Multipass
@@ -25,7 +55,7 @@ Everything happens inside a session directory. Nothing touches the rest of OpenC
 
 ## Isolation rules
 
-- All files in session dir: `~/openclaw/data/ocas-multipass/sessions/{session_id}/`
+- All files in session dir: `$OCAS_DATA_ROOT/data/ocas-multipass/sessions/{session_id}/`
 - No global skill installs. No global MCP config changes. No real identity.
 - No env vars, secrets, or config written outside session dir.
 - If a capability requires breaking isolation, skip it silently and find an alternative.
@@ -163,12 +193,12 @@ If a user runs the same replay 3+ times, suggest permanent installation or a For
 **Action Journal** -- after every `multipass.run`.
 **Research Journal** -- after every `multipass.search`.
 
-Path: `~/openclaw/journals/ocas-multipass/YYYY-MM-DD/{run_id}.json`
+Path: `$OCAS_DATA_ROOT/journals/ocas-multipass/YYYY-MM-DD/{run_id}.json`
 
 ## Storage layout
 
 ```
-~/openclaw/data/ocas-multipass/
+$OCAS_DATA_ROOT/data/ocas-multipass/
   config.json
   search_log.jsonl
   decisions.jsonl
@@ -182,7 +212,7 @@ Path: `~/openclaw/journals/ocas-multipass/YYYY-MM-DD/{run_id}.json`
       skills/
       workspace/
       output/
-~/openclaw/journals/ocas-multipass/
+$OCAS_DATA_ROOT/journals/ocas-multipass/
   YYYY-MM-DD/{run_id}.json
 ```
 
