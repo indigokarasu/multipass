@@ -13,7 +13,7 @@ description: >
 metadata:
   author: Indigo Karasu
   email: mx.indigo.karasu@gmail.com
-  version: "4.1.0"
+  version: "4.1.1"
   hermes:
     tags: [tools, isolation, capability-gap]
     category: execution
@@ -22,10 +22,10 @@ metadata:
     visibility: private
     filesystem:
       read:
-        - "$OCAS_DATA_ROOT/data/ocas-multipass/"
+        - "{agent_root}/commons/data/ocas-multipass/"
       write:
-        - "$OCAS_DATA_ROOT/data/ocas-multipass/"
-        - "$OCAS_DATA_ROOT/journals/ocas-multipass/"
+        - "{agent_root}/commons/data/ocas-multipass/"
+        - "{agent_root}/commons/journals/ocas-multipass/"
     self_update:
       source: "https://github.com/indigokarasu/multipass"
       mechanism: "version-checked tarball from GitHub via gh CLI"
@@ -55,7 +55,7 @@ Everything happens inside a session directory. Nothing touches the rest of OpenC
 
 ## Isolation rules
 
-- All files in session dir: `$OCAS_DATA_ROOT/data/ocas-multipass/sessions/{session_id}/`
+- All files in session dir: `{agent_root}/commons/data/ocas-multipass/sessions/{session_id}/`
 - No global skill installs. No global MCP config changes. No real identity.
 - No env vars, secrets, or config written outside session dir.
 - If a capability requires breaking isolation, skip it silently and find an alternative.
@@ -193,12 +193,12 @@ If a user runs the same replay 3+ times, suggest permanent installation or a For
 **Action Journal** -- after every `multipass.run`.
 **Research Journal** -- after every `multipass.search`.
 
-Path: `$OCAS_DATA_ROOT/journals/ocas-multipass/YYYY-MM-DD/{run_id}.json`
+Path: `{agent_root}/commons/journals/ocas-multipass/YYYY-MM-DD/{run_id}.json`
 
 ## Storage layout
 
 ```
-$OCAS_DATA_ROOT/data/ocas-multipass/
+{agent_root}/commons/data/ocas-multipass/
   config.json
   search_log.jsonl
   decisions.jsonl
@@ -212,7 +212,7 @@ $OCAS_DATA_ROOT/data/ocas-multipass/
       skills/
       workspace/
       output/
-$OCAS_DATA_ROOT/journals/ocas-multipass/
+{agent_root}/commons/journals/ocas-multipass/
   YYYY-MM-DD/{run_id}.json
 ```
 

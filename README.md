@@ -38,7 +38,7 @@ Everything happens inside a session directory. Multipass plans multiple approach
 ## Storage
 
 ```
-$OCAS_DATA_ROOT/data/ocas-multipass/
+{agent_root}/commons/data/ocas-multipass/
   config.json
   search_log.jsonl
   decisions.jsonl
@@ -51,7 +51,7 @@ $OCAS_DATA_ROOT/data/ocas-multipass/
       checkpoints/
       workspace/
       output/
-$OCAS_DATA_ROOT/journals/ocas-multipass/
+{agent_root}/commons/journals/ocas-multipass/
   YYYY-MM-DD/{run_id}.json
 ```
 
