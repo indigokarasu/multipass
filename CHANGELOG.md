@@ -1,3 +1,12 @@
+## [4.1.2] - 2026-04-09
+
+### Added
+- Explicit Background tasks section documenting that multipass has no operational background tasks
+- skill.json file with complete metadata (name, version, description, author, email, skill_type, filesystem, self_update)
+
+### Changed
+- Version bumped from 4.1.1 → 4.1.2 (patch)
+
 ## [4.0.3] - 2026-04-06
 
 ### Added

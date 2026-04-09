@@ -13,7 +13,7 @@ description: >
 metadata:
   author: Indigo Karasu
   email: mx.indigo.karasu@gmail.com
-  version: "4.1.1"
+  version: "4.1.2"
   hermes:
     tags: [tools, isolation, capability-gap]
     category: execution
@@ -251,6 +251,10 @@ On first run (`multipass.init`):
 ## Ontology types
 
 Multipass does not extract entities. It does not emit Signals to Elephas.
+
+## Background tasks
+
+This skill has no operational background tasks beyond the universal `{skill}:update` cron job at midnight for self-updates from GitHub.
 
 ## Visibility
 
