@@ -44,7 +44,7 @@ JSON array of server objects. Extract:
 
 ## 2. ClawHub
 
-OpenClaw skill registry with vector search.
+Platform skill registry with vector search.
 
 ### Endpoint
 
@@ -76,7 +76,7 @@ No auth required. Note: queries are sent to a publisher-controlled endpoint. Do 
 
 - Use natural language descriptions: `"manage calendar events and scheduling"`
 - Vector search handles semantic matching, so be descriptive
-- Filter results: skip skills flagged as "suspicious" by OpenClaw security scan
+- Filter results: skip skills flagged as "suspicious" by platform security scan
 
 ### Response parsing
 
@@ -88,11 +88,11 @@ JSON array of skill objects. Extract:
 - `downloads` -- install count (treat with skepticism per known manipulation vulnerabilities)
 - `stars` -- community signal
 - `license` -- license type
-- `securityScan` -- OpenClaw and VirusTotal results
+- `securityScan` -- Platform security scan and VirusTotal results
 
 ### Trust signals
 
-- OpenClaw security scan result (Benign / Suspicious / Malicious)
+- platform security scan result (Benign / Suspicious / Malicious)
 - VirusTotal scan result
 - Author account age and other published skills
 - Do NOT rely on download count alone as primary trust signal
@@ -141,7 +141,7 @@ Broad search across repositories for skills, MCPs, and API wrappers.
 
 ```
 web_search: github.com {capability} MCP server
-web_search: github.com {capability} openclaw skill
+web_search: github.com {capability} agentskills.io skill
 web_search: github.com {capability} free API
 ```
 
@@ -158,7 +158,7 @@ This surfaces skills in personal repos, forks, and unpublished packages that Cla
 ### Query strategy
 
 - Search for MCP servers first (highest value): `github.com {term} MCP server`
-- Then skills: `github.com {term} openclaw skill SKILL.md`
+- Then skills: `github.com {term} agentskills.io skill SKILL.md`
 - Then API wrappers: `github.com {term} API client free`
 - Add `language:python` or `language:typescript` if the user has a runtime preference
 
@@ -275,7 +275,7 @@ Then `web_fetch` the relevant category or search results page.
 When primary surfaces don't yield strong results, try these curated lists:
 
 - `https://clawskills.sh` -- curated, filtered subset of ClawHub with category navigation
-- `https://github.com/VoltAgent/awesome-openclaw-skills` -- 5,200+ skills, filtered and categorized
+- `https://github.com/VoltAgent/awesome-agent-skills` -- 5,200+ skills, filtered and categorized
 - `https://github.com/punkpeye/awesome-mcp-servers` -- curated MCP server list
 
 Search via `web_fetch` of the raw README and grep for capability keywords.

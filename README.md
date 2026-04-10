@@ -66,4 +66,4 @@ Everything happens inside a session directory. Multipass plans multiple approach
 
 ---
 
-*Multipass is part of the [OpenClaw Agent Suite](https://github.com/indigokarasu) -- a collection of interconnected skills for personal intelligence, autonomous research, and continuous self-improvement.*
+*Multipass is part of the [OCAS Agent Suite](https://github.com/indigokarasu) -- a collection of interconnected skills for personal intelligence, autonomous research, and continuous self-improvement.*

@@ -170,7 +170,7 @@ every 30 seconds:
   if complete or failed → proceed to report
 ```
 
-The orchestrator reads the filesystem, not announce messages. Filesystem is reliable. Announces are not (per OpenClaw issue #17569, #33827).
+The orchestrator reads the filesystem, not announce messages. Filesystem is reliable. Announces are not (per platform issue #17569, #33827).
 
 ## Recovery
 

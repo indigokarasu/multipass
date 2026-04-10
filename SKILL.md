@@ -8,12 +8,12 @@ description: >
   installs, no real identity, clean state in and out. Trigger: 'multipass.run
   {task}', agent about to say 'I can't do that' due to missing tool, 'figure
   out how to do X'. Do not use for tasks solvable with installed skills,
-  permanent skill installs (use openclaw skills install), skill builds (use
+  permanent skill installs (use platform skill install), skill builds (use
   Forge), or general web research (use Sift).
 metadata:
   author: Indigo Karasu
   email: mx.indigo.karasu@gmail.com
-  version: "4.1.1"
+  version: "4.1.2"
   hermes:
     tags: [tools, isolation, capability-gap]
     category: execution
@@ -37,7 +37,7 @@ metadata:
 
 Accomplish tasks that require tools you don't have. Fire and forget. User invokes `multipass.run {task}`, Multipass runs to completion, user gets the output. No check-ins, no approval gates, no escalation.
 
-Everything happens inside a session directory. Nothing touches the rest of OpenClaw.
+Everything happens inside a session directory. Nothing touches the rest of the agent platform.
 
 ## When to use
 
@@ -49,7 +49,7 @@ Everything happens inside a session directory. Nothing touches the rest of OpenC
 ## When NOT to use
 
 - Task is solvable with installed OCAS skills or tools
-- User wants to permanently install a skill (use `openclaw skills install`)
+- User wants to permanently install a skill (use `platform skill install`)
 - User wants to build a new skill (use Forge)
 - General web research (use Sift)
 
@@ -270,7 +270,7 @@ Public.
 This skill self-updates every 24 hours via:
 
 ```bash
-openclaw multipass.update
+multipass.update
 ```
 
 This pulls the latest version from GitHub and restarts the skill's background tasks if applicable.

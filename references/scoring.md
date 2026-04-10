@@ -133,7 +133,7 @@ These APIs require no signup and no API key. Use them directly via web_fetch whe
 ## Green flags (trust boosters)
 
 - Instruction-only (no binary install)
-- Clean VirusTotal + OpenClaw scan
+- Clean VirusTotal + platform security scan
 - Author has other well-rated skills (e.g., steipete, gitgoodordietrying)
 - Active maintenance (commits within 3 months)
 - Permissive license (MIT, MIT-0, Apache-2.0)
