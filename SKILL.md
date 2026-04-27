@@ -13,7 +13,7 @@ description: >
 metadata:
   author: Indigo Karasu
   email: mx.indigo.karasu@gmail.com
-  version: "4.1.2"
+  "4.1.3"
   hermes:
     tags: [tools, isolation, capability-gap]
     category: execution

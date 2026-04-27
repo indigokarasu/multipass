@@ -57,6 +57,9 @@ Everything happens inside a session directory. Multipass plans multiple approach
 
 ## Changelog
 
+
+### v4.1.3 — April 26, 2026
+- Version alignment per spec-ocas-skill-publishing.md (no functional change)
 ### v4.0.0 -- April 4, 2026
 - Final packaging release: README, CHANGELOG, journal spec, full skill.json
 
