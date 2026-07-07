@@ -1,7 +1,7 @@
 ---
+license: MIT
 name: ocas-multipass
 description: 'Accomplishes tasks that need tools the agent does not have. Plans approaches, fills capability gaps with sandboxed tools, executes within an isolated session. Disposable identity, parallel discovery, incremental checkpoints, graceful degradation. Output: task result plus replay script. No global installs, no real identity, clean state in and out. Do not use for tasks solvable with installed skills, permanent skill installs, skill builds (use Forge), or general web research (use Sift).'
-license: MIT
 source: https://github.com/indigokarasu/multipass
 includes:
 - references/**
@@ -130,13 +130,15 @@ On first run (`multipass.init`):
 
 ## Ontology Types
 
-Multipass does not extract entities. It does not emit Signals to Elephas.
+Multipass does not extract entities and does not emit Chronicle signals.
 
 ## Visibility
 
 Public.
 
 ## Gotchas
+
+Error handling in multipass follows a strict isolation contract: never leak session state, never install globally, and never retry the same failure path twice.
 
 - **No global installs, no real identity** — Multipass must not install skills globally, modify MCP configs, or use the real user identity. If a capability requires breaking isolation, skip it silently and find an alternative.
 - **Duplicate drafts/waits are forbidden** — Same action + same result = move on immediately. Two identical failures on the same endpoint is the maximum. No folk theories, no "waiting for the server," no invented timing explanations.
