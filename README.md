@@ -1,25 +1,12 @@
 # multipass
 
 <p align="center">
-<img src="./assets/readme/hero.jpg" width="100%" alt="Accomplish tasks that need tools the agent does not have. Autonomous, isolated, fire-and-forget.">
+  <img src="./assets/readme/hero.jpg" width="100%" alt="Multipass: accomplishes tasks that need tools the agent does not have — autonomous, isolated, fire-and-forget">
 </p>
 
-multipass — Accomplish tasks that need tools the agent does not have. Autonomous, isolated, fire-and-forget.
+Multipass handles tasks that fall outside the agent's built-in toolset. It provisions temporary throwaway identities for services that require signup, runs the task in an isolated environment, and returns the result. It can suggest a permanent skill to Forge when the same task recurs.
 
-
-> Tell it what you need. It does the work.
-
-## Dependencies
-
-**Optional skill cooperation**
-- [Sift](https://github.com/indigokarasu/sift) -- deeper candidate research during discovery; falls back to web_search if absent
-- [Forge](https://github.com/indigokarasu/forge) -- suggested after completion when a permanent skill would be more appropriate
-- [mcporter](https://github.com/steipete/mcporter) -- MCP server access; falls back to direct HTTP JSON-RPC if not installed
-- [ivangdavila/api](https://github.com/ivangdavila/api) -- 147-service reference checked before discovery to avoid redundant searches
-
-**External**
-- None required. Multipass provisions temporary throwaway identities for services that require signup.
-
----
-
-*multipass is part of the [OCAS Agent Suite](https://github.com/indigokarasu).*
+**Capabilities:**
+- Autonomous execution for out-of-scope tasks
+- Throwaway identity provisioning for service signups
+- Optional post-task skill proposal to Forge
