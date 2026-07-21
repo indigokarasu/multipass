@@ -1,7 +1,7 @@
 # multipass
 
 <p align="center">
-<img src="./assets/readme/hero.svg" width="100%" alt="Accomplish tasks that need tools the agent does not have. Autonomous, isolated, fire-and-forget.">
+<img src="./assets/readme/hero.jpg" width="100%" alt="Accomplish tasks that need tools the agent does not have. Autonomous, isolated, fire-and-forget.">
 </p>
 
 multipass — Accomplish tasks that need tools the agent does not have. Autonomous, isolated, fire-and-forget.
