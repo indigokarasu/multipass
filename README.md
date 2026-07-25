@@ -8,7 +8,7 @@ Accomplishes tasks that need tools the agent does not have. Plans approaches, fi
 **Version:** 4.1.4
 **Type:** 
 **Layer:** Execution
-**Author:** Indigo Karasu
+**Author:** <agent-name>
 
 ---
 

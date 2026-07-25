@@ -2,7 +2,7 @@
 license: MIT
 name: ocas-multipass
 description: 'Accomplishes tasks that need tools the agent does not have. Plans approaches, fills capability gaps with sandboxed tools, executes within an isolated session. Disposable identity, parallel discovery, incremental checkpoints, graceful degradation. Output: task result plus replay script. No global installs, no real identity, clean state in and out. Do not use for tasks solvable with installed skills, permanent skill installs, skill builds (use Forge), or general web research (use Sift).'
-source: https://github.com/indigokarasu/multipass
+source: https://github.com/<agent-handle>/multipass
 includes:
 - references/**
 - scripts/**
