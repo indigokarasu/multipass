@@ -1,3 +1,8 @@
+## [4.2.0] - 2026-09-16
+
+### Changed
+- **Token storage discipline** — standardized service credentials at `~/.hermes/{service}_token.json` with freshness validation (expiry + 5min buffer), shape validation (`access_token`/`token_type`/`expires_at` fields), and atomic refresh cleanup before every multiplexed request.
+
 ## [4.1.3] - 2026-04-26
 
 ### Changed
