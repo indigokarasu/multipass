@@ -114,7 +114,7 @@ This skill implements the recovery contract from `spec-ocas-recovery.md`.
 
 See `references/storage-layout.md` for the full directory structure.
 
-**Token storage discipline** (per `spec-ocas-skill-improvements.md` §5.1): Session tokens and service credentials are stored at the standard path `~/.hermes/{service}_token.json` with the following validation before every request:
+**Token storage discipline** (per [[`spec-ocas-skill-improvements.md` ⚠️ Pending spec] ⚠️ Pending spec — not yet authored] §5.1): Session tokens and service credentials are stored at the standard path `~/.hermes/{service}_token.json` with the following validation before every request:
 1. **Freshness check** — compare `expires_at` against `now + 5min`; if expired or expiring within 5 minutes, refresh the token before executing the multiplexed request. Do not send a stale token.
 2. **Shape validation** — verify the file is valid JSON with `{access_token, token_type, expires_at}` fields. A corrupt or missing token file is logged as `token_error` and the request fails with `auth_failure` — never attempt a request with an empty/invalid token.
 3. **Cleanup** — after a refresh, atomically write the new token to the standard path before releasing dependents. Do not leave a mix of old/new tokens per service.
