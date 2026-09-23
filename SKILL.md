@@ -169,3 +169,8 @@ Error handling in multipass follows a strict isolation contract: never leak sess
 | `references/self-update.md` | When running `multipass.update`. |
 | `references/interactive-menu.md` | When invoked interactively via `/` command. |
 | `references/storage-layout.md` | When creating or inspecting session directories. |
+
+## Support Files
+
+- `references/journal.md` — Journal
+- `scripts/update.sh` — Usage: update.sh [--help] — pull latest skill version from upstream
